@@ -42,29 +42,7 @@ Automated Tests: Write and run automated tests to validate your Docker images be
 Document Dockerfiles: Comment and document your Dockerfiles to explain the purpose of each instruction, making it easier for others to understand and maintain.
 By following these best practices, you can ensure that your Docker containers are secure, efficient, and maintainable.
 
-About
-No description, website, or topics provided.
-Resources
- Readme
- Activity
- Custom properties
-Stars
- 2 stars
-Watchers
- 0 watching
-Forks
- 7 forks
-Report repository
-Releases
-No releases published
-Packages
-No packages published
-Languages
-JavaScript
-70.8%
- 
-Dockerfile
-18.1%
+
  
 HTML
 6.2%
