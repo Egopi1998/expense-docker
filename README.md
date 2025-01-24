@@ -1,4 +1,7 @@
 # expense-docker
+Create expense network for communication between containers
+
+
 
 Docker Best Practices
 1. Use Official and Verified Images
