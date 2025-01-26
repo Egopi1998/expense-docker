@@ -9,8 +9,6 @@ services:
     image: db:v1
     build: db/.
     container_name: db
-    networks:
-      - expense
     # ports:
     #   - "8000:5000"
     volumes:
@@ -22,14 +20,10 @@ services:
     command: sh -c "sleep 20 && /opt/server/index.js"
     depends_on:
       - db
-    networks:
-      - expense
   frontend:
     image: frontend:v1
     build: frontend/.
     container_name: frontend
-    networks:
-      - expense
     ports:
       - "80:80"
     
