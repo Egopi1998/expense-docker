@@ -1,0 +1,31 @@
+name: expense
+networks: 
+  name: expense
+  # external: ture #use if you created network already in server
+volumes:
+  name: expense_data
+services:
+  db:
+    image: db:v1
+    container_name: db
+    networks:
+      - expense
+    # ports:
+    #   - "8000:5000"
+    volumes:
+      - expense_data:/var/lib/mysql
+  backend:
+    image: backend:v1
+    container_name: backend
+    depends_on:
+      - db
+    networks:
+      - expense
+  frontend:
+    image: frontend:v1
+    container_name: frontend
+    networks:
+      - expense
+    ports:
+      - "80:80"
+    
