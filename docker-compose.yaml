@@ -1,6 +1,7 @@
 name: expense
 networks: 
-  expense:
+  default: 
+    name: expense
   # external: ture #use if you created network already in server
 volumes:
   expense_data:
