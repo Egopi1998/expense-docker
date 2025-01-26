@@ -19,6 +19,7 @@ services:
     image: backend:v1
     build: backend/.
     container_name: backend
+    entrypoint: sh -c "sleep 20"
     depends_on:
       - db
     networks:
