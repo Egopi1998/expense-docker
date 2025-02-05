@@ -1,0 +1,5 @@
+FROM almalinux:9
+RUN yum install -y telnet
+CMD [ "sleep", "2000" ]
+
+#for debugging the backend and frontend and mysql as we don't curl or mysql on backend container as we are not installing any unwanted configuration on backend container or frontend container.

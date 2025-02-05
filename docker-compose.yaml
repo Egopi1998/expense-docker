@@ -4,16 +4,23 @@ networks:
     name: expense
   # external: ture #use if you created network already in server
 volumes:
-  expense_data:
+  mysql:
 services:
-  db:
-    image: db:v2
-    build: db/.
-    container_name: db
+  mysql:
+    image: mysql:v2
+    build: mysql/.
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=ExpenseApp@1
+      - MYSQL_DATABASE=transactions
+      - MYSQL_USER=expense
+      - MYSQL_PASSWORD=ExpenseApp@1  
     # ports:
     #   - "8000:5000"
     volumes:
-      - expense_data:/var/lib/mysql
+      - source: mysql
+        target: /var/lib/mysql
+        type: volume 
   backend:
     image: backend:v2
     build: backend/.
